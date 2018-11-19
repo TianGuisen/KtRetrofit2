@@ -1,4 +1,4 @@
-package kt.ktretrofit2;
+package kt.ktRetrofit2;
 
 import org.junit.Test;
 

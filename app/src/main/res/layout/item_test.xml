@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="kt.ktRetrofit2.bean.ProductInfo"></variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="300mm"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="200mm"
+            android:layout_height="200mm"
+            android:background="#f00"
+            android:text="@{item.name}"/>
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="200mm"
+            android:layout_height="200mm"
+            android:background="#f0f"
+            android:text='@{""+item.subtitle}'/>
+    </LinearLayout>
+</layout>
