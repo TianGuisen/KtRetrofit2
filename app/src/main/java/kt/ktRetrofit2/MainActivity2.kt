@@ -2,14 +2,14 @@ package kt.ktRetrofit2
 
 import android.os.Bundle
 import android.view.View
-import com.bennyhuo.github.network.services.ProductService
 import com.trello.rxlifecycle2.components.RxActivity
 import kotlinx.android.synthetic.main.activity_main2.*
 import kt.ktRetrofit2.bean.ProductInfo
 import kt.ktRetrofit2.core.RVObserver
 import kt.ktRetrofit2.core.ioMain
-import tg.my.core.adapter.BaseAdapter
-import tg.my.core.adapter.SimpleAdapter
+import kt.ktRetrofit2.servier.ProductService
+import tgs.adapter.BaseAdapter
+import tgs.adapter.SimpleAdapter
 
 class MainActivity2 : RxActivity() {
     val listData = mutableListOf<ProductInfo>()

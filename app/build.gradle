@@ -64,4 +64,5 @@ dependencies {
     implementation 'com.orhanobut:logger:2.2.0'
     //下拉刷新https://github.com/scwang90/SmartRefreshLayout/blob/master/art/md_property.md
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
+    implementation 'com.github.TianGuisen:KtBindAdapter:1.1'
 }
