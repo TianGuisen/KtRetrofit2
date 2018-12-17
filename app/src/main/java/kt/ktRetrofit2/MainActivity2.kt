@@ -43,7 +43,7 @@ class MainActivity2 : RxActivity() {
     fun loadData(pageNum: Int) {
         ProductService.getProductList(pageNum, 10).compose(ioMain(this))
                 .subscribe(object : RVObserver<MutableList<ProductInfo>>(lv, pageNum) {
-                    override fun onSuccess(data: MutableList<ProductInfo>?, code: Int, msg: String?, tag: Any?) {
+                    override fun onSuccess(data: MutableList<ProductInfo>, code: Int, msg: String?, tag: Any?) {
                         if (pageNum == 1) {
                             listData.clear()
                         }

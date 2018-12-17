@@ -18,7 +18,10 @@ class ApiTagManager private constructor() {
     /**
      * 后入队的会被关闭
      */
-    fun add(tag: String, observer: DisposableObserver<*>) {
+    fun add1(tag: String?, observer: DisposableObserver<*>) {
+        if (tag==null){
+            throw IllegalArgumentException("tag不能为null")
+        }
         maps.keys.forEach {
             if (tag == it) {
                 observer.dispose()
@@ -31,19 +34,18 @@ class ApiTagManager private constructor() {
     /**
      * 先入队的会被关闭
      */
-    fun add2(tag: String, observer: DisposableObserver<*>) {
-        maps.keys.forEach {
-            if (tag == it) {
-                maps.get(it)?.dispose()
-                maps.remove(it)
-                maps.put(tag, observer)
-                return
-            }
+    fun add2(tag: String?, observer: DisposableObserver<*>) {
+        if (tag==null){
+            throw IllegalArgumentException("tag不能为null")
         }
+        cancel(tag)
         maps.put(tag, observer)
     }
 
-    fun remove(tag: String) {
+    fun remove(tag: String?) {
+        if (tag==null){
+           return 
+        }
         if (!maps.isEmpty()) {
             maps.remove(tag)
         }

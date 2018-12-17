@@ -17,10 +17,9 @@ import kt.ktRetrofit2.KtApplication.Companion.appContext
  */
 interface IObserver<T> {
     var tag: String?
-    var canRepeat: Boolean
+    var repeat: Int
     var showToast: Boolean
-
-    fun onSuccess(data: T?, code: Int, msg: String?, tag: Any?)
+//    fun onSuccess(data: T, code: Int, msg: String?, tag: Any?)
 
 
     fun onFailure(data: T?, code: Int, msg: String?, tag: Any?) {
@@ -29,17 +28,20 @@ interface IObserver<T> {
     fun onFinish() {
     }
 
-    fun addTag(observer: DisposableObserver<ResWrapper<T>>) {
-        if (!canRepeat && tag != null) {
-            ApiTagManager.instance.add(tag!!, observer)
+    fun addTag(observer: DisposableObserver<ResWrapper<T>>, repeat: Int) {
+        if (repeat == 1 ) {
+            ApiTagManager.instance.add1(tag, observer)
+        } else if (repeat == 2 ) {
+            ApiTagManager.instance.add2(tag, observer)
         }
     }
 
     fun removeTag() {
-        if (!canRepeat && tag != null) {
-            ApiTagManager.instance.remove(tag!!)
+        if (repeat != 0) {
+            ApiTagManager.instance.remove(tag)
         }
     }
+
     /**
      * 网络是否链接
      */
@@ -53,6 +55,7 @@ interface IObserver<T> {
         }
         return false
     }
+
     /**
      * 检查登录
      */

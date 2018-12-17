@@ -15,34 +15,33 @@ import java.net.UnknownHostException
 abstract class NormalObserver<T> : DisposableObserver<ResWrapper<T>>, IObserver<T> {
     var loading: RotateLoading? = null
     override var tag: String? = null
-    override var canRepeat: Boolean = false
     override var showToast: Boolean = true
+    override var repeat=0
 
     /**
      *@loading 是否显示loading
      *@showToast 是否显示错误toast
      *@tag: 请求标记,传入url
+     *@repeat 重复请求策略,默认0,1和2时必须要传入tag
+     *        0:允许重复请求,场景:viewpager多个页面的请求一样但是参数不同,可能短时间内请求多个页面数据
+     *        1:关闭后入队的请求,比较常用:比如按钮的防重复时间是500,但是点击按钮后后台处理时间长达1000,在后500时间内按钮是可点击的但是请求是无意义的
+     *        2:关闭先入队的请求,场景很少:频繁调用接口并只以最后一次的数据为准,出现这种情况通常设计不合理
      */
-    constructor(loading: RotateLoading? = null, showToast:Boolean=true, tag: String? = null) {
+    constructor(loading: RotateLoading? = null, showToast: Boolean = true, tag: String? = null, repeat: Int = 0) {
         this.loading = loading
         this.tag = tag
-        this.showToast=showToast
-    }
-
-    /**
-     * 设置可以重复请求.默认禁止
-     */
-    fun setCanRepeat(): NormalObserver<T> {
-        canRepeat = true
-        return this
+        this.showToast = showToast
+        this.repeat=repeat
     }
 
     override fun onStart() {
         if (!isConnected()) {
-            ToastUtil.normal("网络异常")
+            if (showToast) {
+                ToastUtil.normal("网络异常")
+            }
             return
         }
-        addTag(this)
+        addTag(this,repeat)
         loading?.start()
     }
 
@@ -89,5 +88,6 @@ abstract class NormalObserver<T> : DisposableObserver<ResWrapper<T>>, IObserver<
         }
     }
 
+    abstract fun onSuccess(data: T?, code: Int, msg: String?, tag: Any?)
     
 }
