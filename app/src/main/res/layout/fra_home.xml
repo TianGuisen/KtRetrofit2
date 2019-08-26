@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="v" type="gdwl.tgs.home.HomeFra"/>
+        <variable name="vm" type="gdwl.tgs.home.HomeVM"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/tv1"
+                android:text="测试网络请求"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="50dp"/>
+        <TextView
+                android:id="@+id/tv2"
+                android:text="测试下aRouter跳转"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="50dp"/>
+    </LinearLayout>
+</layout>

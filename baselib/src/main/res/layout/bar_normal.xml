@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titleHeight"
+    android:background="@color/white"
+    android:orientation="horizontal">
+    <!--android:background="@drawable/notitlebar_shade"-->
+
+    <!-- 公共的的标题栏 -->
+    <ImageButton
+        android:id="@+id/iv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:src="@drawable/iv_back_white"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/sg_black"
+        android:textSize="16sp"/>
+
+
+    <ImageButton
+        android:id="@+id/image_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="3dp"
+        android:textColor="@color/sg_black"
+        android:textSize="13dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

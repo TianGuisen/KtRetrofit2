@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fd5b59</color>
+    <color name="colorPrimaryDark">#fd5b59</color>
+    <color name="colorAccent">#fd5b59</color>
+    <!-- 常用颜色值 -->
+    <color name="white">#FFFFFF</color>
+    <color name="fff">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="transparent">#00000000</color>
+    <color name="sg_common_red">#fd5b59</color>
+    <color name="sg_common_red_selected">#f44845</color>
+    <color name="sg_black">#2b2b2b</color>
+    <color name="sg_text_color_hint">#cacaca</color>
+    <color name="sg_text_color">#797979</color>
+    <color name="sg_common_line_color">#e1e1e1</color>
+
+    <color name="sg_common_line_bg">#f8f8f8</color>
+    <color name="sg_common_line_bg_dark">#eaeaea</color>
+    <color name="sg_gray_back">#f5f5f5</color>
+
+    <color name="wechat_green">#3AA666</color>
+    <color name="alipay_blue">#00B1FF</color>
+
+    -----------------im----------------------
+    <color name="help_color">#ff999999</color>
+
+    <!--search-->
+    <color name="search_field_bg">#fffefefe</color>
+
+    -----------------boss----------------------
+    <color name="bs_red">#f7554e</color>
+    <color name="bs_black">#1f1f1f</color>
+    <color name="bs_text_color">#797979</color>
+    <color name="bs_hint_color">#979797</color>
+    <color name="bs_white">#ffffff</color>
+    <color name="bs_white_unselected">#ffbbbb</color>
+    <color name="bs_common_line_bg">#f5f5f5</color>
+    <color name="bs_red_temp">#ee4112</color>
+    <color name="bs_green">#00BA92</color>
+    <color name="bs_text_gray">#555555</color>
+    ------------------8：30--------------------
+    <color name="rec_red_common">#FF2074</color>
+    <color name="b333">#333333</color>
+    <color name="g999">#999999</color>
+    <color name="rec_yellow_common">#FFC12B</color>
+    <color name="rec_color_eeeeee">#EEEEEE</color>
+    <color name="rec_trans_e5e5e5">#44E5E5E5</color>
+    <color name="rec_color_green">#0DAF3F</color>
+    <color name="rec_red_FF5959">#FF5959</color>
+    <color name="ff2">#FF205F</color>
+    <color name="ff3">#ff345a</color>
+    <color name="ff25">#FF255B</color>
+    <color name="b3b">#b3b3b3</color>
+    <color name="ffc">#ffcbda</color>
+    <color name="a8a">#a8a8a8</color>
+    <color name="ffd">#ffdae3</color>
+    <color name="b30">#309bff</color>
+    <color name="f1f">#f1f4ff</color>
+    <color name="eee">#eeeeee</color>
+    <color name="ffe">#ffeff3</color>
+    <color name="ff9">#ff91ac</color>
+    <color name="f5f">#f5f7f9</color>
+    <color name="b448">#4489ff</color>
+    <color name="f9f">#f9f9f8</color>
+    <color name="g66">#666666</color>
+    <color name="blue_endColor">#032E9CFF</color>
+    <color name="blue_startColor">#375380FF</color>
+    <color name="ccc">#cccccc</color>
+    <color name="b597">#597eff</color>
+    <color name="ffa">#ffae3b</color>
+    <color name="p945">#945ffe</color>
+    <color name="e5e">#e5e5e5</color>
+    <color name="ffb">#ffbacd</color>
+    
+  
+</resources>

@@ -2,67 +2,45 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-kotlin {
-    experimental {
-        coroutines "enable"
-    }
-    androidExtensions {
-        experimental = true
-    }
-}
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "kt.ktRetrofit2"
-        minSdkVersion 21
-        targetSdkVersion 27
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     dataBinding {
         enabled = true
     }
-    compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+    defaultConfig {
+        // 方法太多添加这个
+        multiDexEnabled true
     }
+   
 }
-
+kapt {
+    //aRouter
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+    generateStubs = true
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
-    implementation 'androidx.core:core-ktx:0.3'
-    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.2.51'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.50'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.25.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.25.0'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    //rx2
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.14'
-    implementation 'com.ttsea.jrxbus2:jrxbus2:1.0.3'//https://github.com/Jasonzhou613/JRxBus2
-    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.2.2'
-    implementation 'com.trello.rxlifecycle2:rxlifecycle-android-lifecycle-kotlin:2.2.2'
-    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
-    //retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
-    implementation 'org.ligboy.retrofit2:converter-fastjson:2.1.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    //log日志
-    implementation 'com.orhanobut:logger:2.2.0'
-    //下拉刷新https://github.com/scwang90/SmartRefreshLayout/blob/master/art/md_property.md
-    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-7'
-    implementation 'com.github.TianGuisen:KtBindAdapter:1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(':baselib')
+    runtimeOnly project(':test2login')
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    //aRouter
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
 }

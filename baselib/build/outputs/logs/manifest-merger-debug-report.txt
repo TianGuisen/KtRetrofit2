@@ -1,0 +1,73 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:1:1-29:12
+INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:1:1-29:12
+INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:1:1-29:12
+	package
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:2:11-35
+		INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:4:5-78
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:4:22-76
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:5:5-82
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:5:22-80
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:7:22-78
+application
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:9:5-28:19
+meta-data#com.amap.api.v2.apikey
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:10:9-12:67
+	android:value
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:12:17-65
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:11:17-54
+meta-data#android.max_aspect
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:13:9-15:38
+	android:value
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:15:17-36
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:14:17-50
+meta-data#android.notch_support
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:16:9-18:39
+	android:value
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:18:17-37
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:17:17-53
+meta-data#notch.config
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:19:9-21:53
+	android:value
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:21:17-51
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:20:17-44
+meta-data#design_width_in_dp
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:22:9-24:39
+	android:value
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:24:17-37
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:23:17-50
+meta-data#design_height_in_dp
+ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:25:9-27:39
+	android:value
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:27:17-37
+	android:name
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml:26:17-51
+uses-sdk
+INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml
+INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml
+		ADDED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\a\Desktop\Tian\baselib\src\main\AndroidManifest.xml

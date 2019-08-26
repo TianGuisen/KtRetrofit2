@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titleHeight">160pt</dimen>
+    <dimen name="leftSpace">52pt</dimen>
+    <dimen name="rightSpace">52pt</dimen>
+</resources>
