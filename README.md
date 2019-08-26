@@ -57,3 +57,4 @@ fun <T> Observable<ResWrapper<T>>.lvSub(onSuccess: ((ResWrapper<T>) -> Unit)? = 
     subscribe(ob)
 }
 ```
+注意：如果使用mvvm架构，vm层就无法拿到v的引用，也就无法自动在请求中显示dialog、recyclerview空列表，需要额外写代码处理。
