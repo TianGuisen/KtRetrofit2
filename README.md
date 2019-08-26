@@ -1,6 +1,17 @@
 # KtRetrofit2
 Kotlin+Rxjava2+Retrofit2二次封装,使用kotlin语言,有loading,token,防多次重复请求等处理  
 代码在baselib里com.lb.baselib.retrofit下
+使用时需要根据情况修改一些代码。
+1.ResWrapper，根据后端返回的外层json修改。
+```  
+{
+	"code":0,
+	"message":"",
+	"data":null,
+}
+data class ResWrapper<out T>(val code: Int = -1,val message: String,val data: T?)
+```
+
 
 使用方法  
 ```
