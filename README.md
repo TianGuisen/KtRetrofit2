@@ -6,8 +6,8 @@ Kotlin+Rxjava2+Retrofit2二次封装,使用kotlin语言,有loading,token,防多�
 ```
 //普通请求使用NormalObserver
 guideGson.login("a", "1").compose(ioMain(this)).normalSub({
-               Logger.d(it)
-			   it.data.run { 
+                Logger.d(it)
+		it.data.run { 
                 Logger.d(name)    
                 }
             })
