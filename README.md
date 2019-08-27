@@ -72,9 +72,7 @@ fun <T> Observable<ResWrapper<T>>.lvSub(onSuccess: ((ResWrapper<T>) -> Unit)? = 
     subscribe(ob)
 }
 ```
-<<<<<<< HEAD
 
-=======
 ```
 //同时进行多次请求且全部返回才进行后续处理
 guideGson.testzip("a", "1").compose(ioMain(this)).zipSub({
