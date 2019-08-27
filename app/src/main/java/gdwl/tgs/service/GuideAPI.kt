@@ -24,5 +24,5 @@ interface GuideAPI {
      */
     @GET("x/show/old?platform=android&device=&build=412001")
     fun getRecommendedInfo(): Observable<RecommendInfo>
-    
+
 }

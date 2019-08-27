@@ -13,11 +13,11 @@ import io.reactivex.Observable
  */
 
 fun <T> Observable<ResWrapper<T>>.normalSub(
-        onSuccess: ((ResWrapper<T>) -> Unit)? = null,
-        onFailure: ((ResWrapper<T>?) -> Unit)? = null,
-        onFinish: (() -> Unit)? = null,
-        context: Context? = null,//传入表示显示dialog
-        showToast: Boolean = true) {
+    onSuccess: ((ResWrapper<T>) -> Unit)? = null,
+    onFailure: ((ResWrapper<T>?) -> Unit)? = null,
+    onFinish: (() -> Unit)? = null,
+    context: Context? = null,//传入表示显示dialog
+    showToast: Boolean = true) {
     val ob = object : NormalObserver<T>(context, showToast) {
         override fun onSuccess(t: ResWrapper<T>) {
             onSuccess?.let { onSuccess(t) }
@@ -34,23 +34,14 @@ fun <T> Observable<ResWrapper<T>>.normalSub(
     subscribe(ob)
 }
 
-fun <T> Observable<ResWrapper<T>>.lvSub(onSuccess: (ResWrapper<T>) -> Unit) {
-    val ob = object : LVObserver<T>() {
-        override fun onSuccess(t: ResWrapper<T>) {
-            onSuccess(t)
-        }
 
-        override fun onFailure(t: ResWrapper<T>?) {
-        }
-    }
-    subscribe(ob)
-}
-
-fun <T> Observable<ResWrapper<T>>.lvSub(onSuccess: ((ResWrapper<T>) -> Unit)? = null,
-                                        onFailure: ((ResWrapper<T>?) -> Unit)? = null,
-                                        loadView: LoadView? = null,//传入表示显示dialog
-                                        page: Int = 1,
-                                        showToast: Boolean = true) {
+fun <T> Observable<ResWrapper<T>>.lvSub(
+    onSuccess: ((ResWrapper<T>) -> Unit)? = null,
+    onFailure: ((ResWrapper<T>?) -> Unit)? = null,
+    onFinish: (() -> Unit)? = null,
+    loadView: LoadView? = null,//传入表示显示dialog
+    page: Int = 1,
+    showToast: Boolean = true) {
     val ob = object : LVObserver<T>(loadView, page, showToast) {
         override fun onSuccess(t: ResWrapper<T>) {
             onSuccess?.let { onSuccess(t) }
@@ -59,20 +50,30 @@ fun <T> Observable<ResWrapper<T>>.lvSub(onSuccess: ((ResWrapper<T>) -> Unit)? = 
         override fun onFailure(t: ResWrapper<T>?) {
             onFailure?.let { onFailure(t) }
         }
+
+        override fun onFinish() {
+            onFinish?.let { onFinish() }
+        }
     }
     subscribe(ob)
 }
 
-fun Observable<MutableList<Any>>.zipSub(onSuccess: (MutableList<Any>) -> Unit, onFailure: (ResWrapper<Any>?) -> Unit) {
+fun Observable<MutableList<Any>>.zipSub(
+    onSuccess: ((MutableList<Any>) -> Unit)? = null,
+    onFailure: ((ResWrapper<Any>?) -> Unit)? = null,
+    onFinish: (() -> Unit)? = null) {
     val ob = object : ZipObserver<Any>() {
         override fun onSuccess(data: MutableList<Any>) {
-            onSuccess(data)
+            onSuccess?.let { onSuccess(data) }
         }
 
         override fun onFailure(t: ResWrapper<Any>?) {
-            onFailure(t)
+            onFailure?.let { onFailure(t) }
         }
 
+        override fun onFinish() {
+            onFinish?.let { onFinish() }
+        }
     }
     subscribe(ob)
 }

@@ -22,7 +22,6 @@ class HomeFra : BaseVMFra<FraHomeBinding>() {
 
     override fun setVM() = vm
 
-    
     override fun inited() {
         tv1.setDoubleClickLis {
             guideGson.getBannerInfo().compose(ioMain(this)).normalSub({
@@ -30,7 +29,7 @@ class HomeFra : BaseVMFra<FraHomeBinding>() {
             })
         }
         tv2.setDoubleClickLis {
-//            使用反射跳转
+            //            使用反射跳转
 //            val forName = Class.forName("com.example.test2login.LoginActivity")
 //            activity!!.startActivity(Intent(activity,forName))
 //            ARouter.getInstance().build("/main/MainActivity").navigation();
