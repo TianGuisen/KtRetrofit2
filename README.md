@@ -95,5 +95,5 @@ fun Observable<MutableList<Any>>.zipSub(onSuccess: (MutableList<Any>) -> Unit, o
     subscribe(ob)
 }
 ```
->>>>>>> e41bc362aeefc6c8a1bff6a9f2ed40565470d5cc
+
 注意：如果使用mvvm架构，vm层就无法拿到v的引用，也就无法自动在请求中显示dialog、recyclerview空列表，需要额外写代码处理。
