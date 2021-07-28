@@ -1,3 +1,5 @@
+废弃，改进版本在tlib
+
 # KtRetrofit2
 Kotlin+Rxjava2+Retrofit2二次封装,使用kotlin语言,有loading,token,防多次重复请求等处理  
 代码在baselib里com.lb.baselib.retrofit下
